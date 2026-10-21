@@ -1,0 +1,25 @@
+{
+  "name": "garmin-activities-mcp",
+  "version": "1.0.0",
+  "description": "MCP de atividades Garmin com retorno limitado a métricas de treino, sem localização ou identificação.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "test:live": "npm run build && node scripts/live-check.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.3.1",
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
+}
